@@ -1,0 +1,13 @@
+spring:
+  application:
+    # 名字不要是下划线，要中划线
+    name: eureka-server
+server:
+  port: 8761
+eureka:
+  instance:
+    # 和配置文件的 application-xxx.yml 相同
+    hostname: eurekaserver2
+  client:
+    service-url:
+      defaultZone: http://eurekaserver1:8761/eureka/
